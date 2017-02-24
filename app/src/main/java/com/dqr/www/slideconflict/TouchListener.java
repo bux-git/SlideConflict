@@ -2,7 +2,6 @@ package com.dqr.www.slideconflict;
 
 import android.graphics.Rect;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -30,7 +29,6 @@ public class TouchListener implements View.OnTouchListener {
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        Log.d("ViewPageSubClass", "ViewPager.onTouch 中  " + event.getAction());
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 startX = event.getX();
@@ -65,11 +63,8 @@ public class TouchListener implements View.OnTouchListener {
      * @return
      */
     private boolean isInsideParent(View view) {
-        //Log.d(TAG, "isInsideParent: view top:"+view.getTop()+" view left:"+view.getLeft()+" view bottom:"+view.getBottom()+" view right:"+view.getRight()
-        // +"viewGroup top:"+viewGroup.getTop()+" viewGroup left:"+viewGroup.getLeft()+" viewGroup bottom:"+viewGroup.getBottom()+" viewGroup right:"+viewGroup.getRight());
         Rect rt = new Rect();
         view.getGlobalVisibleRect(rt);
-        Log.d("isInsideParent", "Rect: top:" + rt.top + " left:" + rt.left + "   right:" + rt.right + "  bottom:" + rt.bottom);
         boolean result = false;
 
         if (rt.left > 0 && rt.right < width

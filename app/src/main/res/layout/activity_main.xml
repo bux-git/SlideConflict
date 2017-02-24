@@ -1,63 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.dqr.www.slideconflict.MainActivity">
 
     <com.dqr.www.slideconflict.HorizontalScrollViewSubClass
         android:id="@+id/hls_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="none"
-        android:layout_centerInParent="true">
-     <LinearLayout android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-     android:orientation="horizontal">
-         <com.dqr.www.slideconflict.ViewPageSubClass
-             android:layout_margin="6dp"
-             android:id="@+id/vp_pager1"
-             android:layout_width="200dp"
-             android:layout_height="200dp"
-             android:background="@color/colorPrimaryDark">
-         </com.dqr.www.slideconflict.ViewPageSubClass>
+        android:layout_centerInParent="true"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/llt_content"
+            android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+            <com.dqr.www.slideconflict.ViewPageSubClass
+                android:id="@+id/vp_pager1"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_margin="6dp"
+                android:background="@color/colorPrimaryDark">
+            </com.dqr.www.slideconflict.ViewPageSubClass>
 
-         <com.dqr.www.slideconflict.ViewPageSubClass
-             android:layout_margin="6dp"
-             android:id="@+id/vp_pager2"
-             android:layout_width="200dp"
-             android:layout_height="200dp"
-             android:background="@color/colorPrimaryDark">
-         </com.dqr.www.slideconflict.ViewPageSubClass>
+            <com.dqr.www.slideconflict.ViewPageSubClass
+                android:id="@+id/vp_pager2"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_margin="6dp"
+                android:background="@color/colorPrimaryDark">
+            </com.dqr.www.slideconflict.ViewPageSubClass>
 
-         <com.dqr.www.slideconflict.ViewPageSubClass
-             android:layout_margin="6dp"
-             android:id="@+id/vp_pager3"
-             android:layout_width="200dp"
-             android:layout_height="200dp"
-             android:background="@color/colorPrimaryDark">
-         </com.dqr.www.slideconflict.ViewPageSubClass>
+            <com.dqr.www.slideconflict.ViewPageSubClass
+                android:id="@+id/vp_pager3"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_margin="6dp"
+                android:background="@color/colorPrimaryDark">
+            </com.dqr.www.slideconflict.ViewPageSubClass>
 
-         <com.dqr.www.slideconflict.ViewPageSubClass
-             android:layout_margin="6dp"
-             android:id="@+id/vp_pager4"
-             android:layout_width="200dp"
-             android:layout_height="200dp"
-             android:background="@color/colorPrimaryDark">
-         </com.dqr.www.slideconflict.ViewPageSubClass>
+            <com.dqr.www.slideconflict.ViewPageSubClass
+                android:id="@+id/vp_pager4"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_margin="6dp"
+                android:background="@color/colorPrimaryDark">
+            </com.dqr.www.slideconflict.ViewPageSubClass>
 
-         <com.dqr.www.slideconflict.ViewPageSubClass
-             android:layout_margin="6dp"
-             android:id="@+id/vp_pager5"
-             android:layout_width="200dp"
-             android:layout_height="200dp"
-             android:background="@color/colorPrimaryDark">
-         </com.dqr.www.slideconflict.ViewPageSubClass>
+            <com.dqr.www.slideconflict.ViewPageSubClass
+                android:id="@+id/vp_pager5"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_margin="6dp"
+                android:background="@color/colorPrimaryDark">
+            </com.dqr.www.slideconflict.ViewPageSubClass>
 
-     </LinearLayout>
+        </LinearLayout>
     </com.dqr.www.slideconflict.HorizontalScrollViewSubClass>
-
-</RelativeLayout>
+    <Button
+        android:id="@+id/click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="click"/>
+</LinearLayout>

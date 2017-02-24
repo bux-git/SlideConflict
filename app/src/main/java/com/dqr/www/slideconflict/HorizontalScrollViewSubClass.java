@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.HorizontalScrollView;
 
@@ -35,20 +34,20 @@ public class HorizontalScrollViewSubClass extends HorizontalScrollView {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.d(TAG, "HorizontalScrollViewSubClass.dispatchTouchEvent 中  "+ev.getAction());
+       // Log.d(TAG, "HorizontalScrollViewSubClass.dispatchTouchEvent 中  "+ev.getAction());
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        Log.d(TAG, "HorizontalScrollViewSubClass.onInterceptTouchEvent 中  "+ev.getAction());
+       // Log.d(TAG, "HorizontalScrollViewSubClass.onInterceptTouchEvent 中  "+ev.getAction());
         return super.onInterceptTouchEvent(ev);
     }
 
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.d(TAG, "HorizontalScrollViewSubClass.onTouchEvent 中  "+event.getAction());
+       // Log.d(TAG, "HorizontalScrollViewSubClass.onTouchEvent 中  "+event.getAction());
         return super.onTouchEvent(event);
     }
 }
